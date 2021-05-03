@@ -1,5 +1,6 @@
 <h1 style="text-align: center;">:construction: Desbravadores Subterraneo (Em desenvolvimento)</h1>
-<p style="text-align: center;">Para acompanhamento no desenvolvimento do projeto para a disciplina de TÓPICOS ESPECIAIS EM PROGRAMAÇÃO (TEP).</p>
+<p style="text-align: center;">Para acompanhamento no desenvolvimento do projeto para a disciplina de TÓPICOS ESPECIAIS
+    EM PROGRAMAÇÃO (TEP).</p>
 
 <hr>
 
@@ -39,3 +40,29 @@ Os inigos são serem desconhecidos para as pessoas do mundo, há dois tipos prin
 <h3>Níveis</h3>
 
 O jogo será divido em níveis, ao todo serão {numero_de_níveis} níveis para serem superados durante a gameplay.
+
+
+<h1>Observações de desenvolvimento</h1>
+
+<h3>Criação dos mapas</h3>
+
+Para que o mapa possa ser adicionado ao game será necessário a criação de arquivos formatados especificamente para a Godot.
+
+A criação dos arquivos é feita pela própria Godot, onde a engine oferece uma opção para a criaçã de Sprites selecionando uma parte específica de uma imagem, dessa forna sendo necessário a criação de apenas um arquivo contendo todos os objetos que serão utilizados no mapa.
+
+A engine oferece também a colocação de colisões nos objetos criados, não sendo obrigatório a colocação das colisões, mas em objetos cujo papel será de servir de base para o player, as colisões são importantes.
+
+Para a criação dos mapas, devemos observar que há um arquivo chamado *.tres.
+
+<h3>Comandos de entrada</h3>
+
+Os comandos de entrada se referem a como o jogador irá interagir com o jogo, como a proposta do jogo é que o mesmo sejá jogável em computadores por meio do teclado e gamepad, se faz necessário que dois tipos de comandos sejam interpretado apenas como uma ação no jogo, por exemplo, no teclado se a tecla **"W"** for precionada o player deve pular, da mesma forma se a tecla **"A"** for precionada (Em gamepads baseados no controle de Xbox, no controle de playstation seria a tecla **"X"**) o player também deve executar a ação de pular, podemos perceber que há dois tipos de entradas diferentes em periféricos diferentes que devem executar uma mesma ação no jogo.
+
+A Godot oferece uma funcionalidade que pode ser utilizada para facilitar essa configuração, nas configurações de projetos podemos definir essas configurações de forma simples, diferentemente se formos definir essas configurações de forma manual. Basicamente a Godot oferece a opção de criar um label e nesse label definir teclas pré configuradas pela Godot, observe o exemplo abaixo para mais detalhes.
+
+**label:** jump <br>
+**ações**:
+    1. Gamepad (Xbox A, Playstation X)
+    2. Computador (W, Space)
+
+Agora para que esse label seja utilizado basta informar no código fonte que se a label **jump** for precionada o player deve executar a ação de pular.
