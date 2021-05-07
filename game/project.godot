@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="source_code"
+run/main_scene="res://src/Levels/FirstLevel.tscn"
 config/icon="res://icon.png"
 
 [display]

@@ -79,6 +79,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="5" type="Sprite" parent="."]
+modulate = Color( 0.286275, 0.0823529, 0.0823529, 1 )
 position = Vector2( 73.1164, 24.4674 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -87,12 +88,8 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="5"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="5/StaticBody2D"]
-shape = SubResource( 1 )
-
 [node name="6" type="Sprite" parent="."]
+modulate = Color( 0.286275, 0.0823529, 0.0823529, 1 )
 position = Vector2( 57.1164, 24.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -101,12 +98,8 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="6"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="6/StaticBody2D"]
-shape = SubResource( 1 )
-
 [node name="7" type="Sprite" parent="."]
+modulate = Color( 0.286275, 0.0823529, 0.0823529, 1 )
 position = Vector2( 89.1164, 24.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -115,12 +108,8 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="7"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="7/StaticBody2D"]
-shape = SubResource( 1 )
-
 [node name="8" type="Sprite" parent="."]
+modulate = Color( 0.286275, 0.0823529, 0.0823529, 1 )
 position = Vector2( 73.1164, 40.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -129,12 +118,8 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="8"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="8/StaticBody2D"]
-shape = SubResource( 1 )
-
 [node name="9" type="Sprite" parent="."]
+modulate = Color( 0.286275, 0.0823529, 0.0823529, 1 )
 position = Vector2( 73.1164, 8.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -143,12 +128,8 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="9"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="9/StaticBody2D"]
-shape = SubResource( 1 )
-
 [node name="10" type="Sprite" parent="."]
+modulate = Color( 0.286275, 0.0823529, 0.0823529, 1 )
 position = Vector2( 57.1164, 8.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -157,12 +138,8 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="10"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="10/StaticBody2D"]
-shape = SubResource( 1 )
-
 [node name="11" type="Sprite" parent="."]
+modulate = Color( 0.286275, 0.0823529, 0.0823529, 1 )
 position = Vector2( 89.1164, 8.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -171,12 +148,8 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="11"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="11/StaticBody2D"]
-shape = SubResource( 1 )
-
 [node name="12" type="Sprite" parent="."]
+modulate = Color( 0.286275, 0.0823529, 0.0823529, 1 )
 position = Vector2( 57.1164, 40.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -185,12 +158,8 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="12"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="12/StaticBody2D"]
-shape = SubResource( 1 )
-
 [node name="13" type="Sprite" parent="."]
+modulate = Color( 0.286275, 0.0823529, 0.0823529, 1 )
 position = Vector2( 89.1164, 40.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -198,8 +167,3 @@ region_rect = Rect2( 64, 64, 16, 16 )
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="StaticBody2D" type="StaticBody2D" parent="13"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="13/StaticBody2D"]
-shape = SubResource( 1 )
