@@ -11,6 +11,7 @@
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.05, 1 )
 motion_mirroring = Vector2( 1024, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
@@ -24,6 +25,7 @@ motion_scale = Vector2( 0.15, 1 )
 motion_mirroring = Vector2( 1024, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
 scale = Vector2( 1.06667, 1.26667 )
 texture = ExtResource( 5 )
 centered = false
@@ -33,6 +35,7 @@ motion_scale = Vector2( 0.2, 1 )
 motion_mirroring = Vector2( 1024, 0 )
 
 [node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
 scale = Vector2( 1.06667, 1.26667 )
 texture = ExtResource( 4 )
 centered = false

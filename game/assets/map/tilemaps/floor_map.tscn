@@ -8,6 +8,7 @@ extents = Vector2( 7.90783, 8 )
 [node name="tile_map_floor" type="Node2D"]
 
 [node name="0" type="Sprite" parent="."]
+modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
 position = Vector2( 8.20876, 8.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -17,12 +18,14 @@ __meta__ = {
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="0"]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0/StaticBody2D"]
 position = Vector2( 1, 0 )
 shape = SubResource( 1 )
 
 [node name="1" type="Sprite" parent="."]
+modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
 position = Vector2( 24.3417, 8.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -32,11 +35,13 @@ __meta__ = {
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="1"]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="1/StaticBody2D"]
 shape = SubResource( 1 )
 
 [node name="2" type="Sprite" parent="."]
+modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
 position = Vector2( 40.2341, 8.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -51,6 +56,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="3" type="Sprite" parent="."]
+modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
 position = Vector2( 8.20876, 24.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -60,11 +66,13 @@ __meta__ = {
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="3"]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="3/StaticBody2D"]
 shape = SubResource( 1 )
 
 [node name="4" type="Sprite" parent="."]
+modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
 position = Vector2( 40.2341, 24.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -79,7 +87,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="5" type="Sprite" parent="."]
-modulate = Color( 0.286275, 0.0823529, 0.0823529, 1 )
+modulate = Color( 0.596078, 0.341176, 0.2, 1 )
 position = Vector2( 73.1164, 24.4674 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -89,7 +97,7 @@ __meta__ = {
 }
 
 [node name="6" type="Sprite" parent="."]
-modulate = Color( 0.286275, 0.0823529, 0.0823529, 1 )
+modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
 position = Vector2( 57.1164, 24.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -99,7 +107,7 @@ __meta__ = {
 }
 
 [node name="7" type="Sprite" parent="."]
-modulate = Color( 0.286275, 0.0823529, 0.0823529, 1 )
+modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
 position = Vector2( 89.1164, 24.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -109,7 +117,7 @@ __meta__ = {
 }
 
 [node name="8" type="Sprite" parent="."]
-modulate = Color( 0.286275, 0.0823529, 0.0823529, 1 )
+modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
 position = Vector2( 73.1164, 40.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -119,7 +127,7 @@ __meta__ = {
 }
 
 [node name="9" type="Sprite" parent="."]
-modulate = Color( 0.286275, 0.0823529, 0.0823529, 1 )
+modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
 position = Vector2( 73.1164, 8.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -129,7 +137,7 @@ __meta__ = {
 }
 
 [node name="10" type="Sprite" parent="."]
-modulate = Color( 0.286275, 0.0823529, 0.0823529, 1 )
+modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
 position = Vector2( 57.1164, 8.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -139,7 +147,7 @@ __meta__ = {
 }
 
 [node name="11" type="Sprite" parent="."]
-modulate = Color( 0.286275, 0.0823529, 0.0823529, 1 )
+modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
 position = Vector2( 89.1164, 8.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -149,7 +157,7 @@ __meta__ = {
 }
 
 [node name="12" type="Sprite" parent="."]
-modulate = Color( 0.286275, 0.0823529, 0.0823529, 1 )
+modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
 position = Vector2( 57.1164, 40.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -159,7 +167,7 @@ __meta__ = {
 }
 
 [node name="13" type="Sprite" parent="."]
-modulate = Color( 0.286275, 0.0823529, 0.0823529, 1 )
+modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
 position = Vector2( 89.1164, 40.3096 )
 texture = ExtResource( 1 )
 region_enabled = true
