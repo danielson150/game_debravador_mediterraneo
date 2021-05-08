@@ -4,6 +4,7 @@ const  MAX_JUMP: = 1
 var jump_count = 0
 export var stomp_inpulse: = 300
 
+
 func _on_EnemyDetector_area_entered(area: Area2D) -> void:
 	_velocity = calculate_stomp_velocity(_velocity, stomp_inpulse)
 

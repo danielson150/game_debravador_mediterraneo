@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/map/tilemaps/floor_map.tres" type="TileSet" id=2]
 [ext_resource path="res://assets/map/background1.png" type="Texture" id=3]
-[ext_resource path="res://assets/map/background4a.png" type="Texture" id=4]
-[ext_resource path="res://assets/map/background3.png" type="Texture" id=5]
+[ext_resource path="res://assets/map/background3.png" type="Texture" id=4]
+[ext_resource path="res://assets/map/background4a.png" type="Texture" id=5]
 [ext_resource path="res://src/Actors/Zombie.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/map/tilemaps/enemy_wall.tres" type="TileSet" id=7]
 [ext_resource path="res://src/Actors/Goblin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Actors/Demon.tscn" type="PackedScene" id=9]
 
 [node name="FirstLevel" type="Node2D"]
 
@@ -18,29 +19,29 @@ motion_scale = Vector2( 0.05, 1 )
 motion_mirroring = Vector2( 1024, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-modulate = Color( 0.360784, 0.266667, 0.0901961, 1 )
+modulate = Color( 0.462745, 0.290196, 0.141176, 1 )
 scale = Vector2( 1.06667, 1.26667 )
 texture = ExtResource( 3 )
 centered = false
 
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.15, 1 )
 motion_mirroring = Vector2( 1024, 0 )
 
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
-modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
-scale = Vector2( 1.06667, 1.26667 )
-texture = ExtResource( 5 )
-centered = false
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2( 0.2, 1 )
-motion_mirroring = Vector2( 1024, 0 )
-
-[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
-modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+modulate = Color( 0.462745, 0.290196, 0.141176, 1 )
 scale = Vector2( 1.06667, 1.26667 )
 texture = ExtResource( 4 )
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.25, 1 )
+motion_mirroring = Vector2( 1024, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+modulate = Color( 0.462745, 0.290196, 0.141176, 1 )
+scale = Vector2( 1.06667, 1.26667 )
+texture = ExtResource( 5 )
 centered = false
 
 [node name="Enemies" type="Node2D" parent="."]
@@ -75,6 +76,10 @@ position = Vector2( 128, 311.78 )
 [node name="Goblin8" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( 224, 310.185 )
 
+[node name="Demon" parent="Enemies" instance=ExtResource( 9 )]
+position = Vector2( 887.989, 250.188 )
+flip_h = true
+
 [node name="Map" type="Node2D" parent="."]
 
 [node name="map" type="TileMap" parent="Map"]
@@ -95,4 +100,4 @@ format = 1
 tile_data = PoolIntArray( 0, 0, 0, 1245189, 0, 0, 1245203, 0, 0, 1245209, 0, 0, 1245216, 0, 0, 1245219, 0, 0, 1245226, 0, 0, 1376301, 0, 0, 1376308, 0, 0, 1638437, 0, 0, 1638444, 0, 0, 1966109, 0, 0, 1966116, 0, 0, 2228242, 0, 0, 2228266, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 104, 512 )
+position = Vector2( 104, 504.405 )

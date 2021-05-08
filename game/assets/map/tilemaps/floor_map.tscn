@@ -1,9 +1,18 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/map/tilesetgrass.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.90783, 8 )
+
+[sub_resource type="OccluderPolygon2D" id=2]
+polygon = PoolVector2Array( -2.82902, 4.51324, 7.98522, 4.94969, 7.79124, 7.6904, -2.79696, 7.48374 )
+
+[sub_resource type="OccluderPolygon2D" id=3]
+polygon = PoolVector2Array( -8.19621, 5.6771, 7.85543, 5.7256, 7.92133, 8.02339, -8.1631, 7.73584 )
+
+[sub_resource type="OccluderPolygon2D" id=4]
+polygon = PoolVector2Array( -8.03698, 5.09517, 2.29232, 5.09517, 1.82034, 7.74561, -7.98849, 7.95634 )
 
 [node name="tile_map_floor" type="Node2D"]
 
@@ -24,6 +33,9 @@ visible = false
 position = Vector2( 1, 0 )
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="0"]
+occluder = SubResource( 2 )
+
 [node name="1" type="Sprite" parent="."]
 modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
 position = Vector2( 24.3417, 8.3096 )
@@ -40,6 +52,9 @@ visible = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="1/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="1"]
+occluder = SubResource( 3 )
+
 [node name="2" type="Sprite" parent="."]
 modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
 position = Vector2( 40.2341, 8.3096 )
@@ -53,7 +68,11 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="2/StaticBody2D"]
+visible = false
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="2"]
+occluder = SubResource( 4 )
 
 [node name="3" type="Sprite" parent="."]
 modulate = Color( 0.976471, 0.584314, 0.368627, 1 )
@@ -84,6 +103,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="4"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="4/StaticBody2D"]
+visible = false
 shape = SubResource( 1 )
 
 [node name="5" type="Sprite" parent="."]
