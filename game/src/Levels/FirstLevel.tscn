@@ -48,7 +48,13 @@ position = Vector2( 104, 512 )
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Zombie" parent="Enemies" instance=ExtResource( 6 )]
-position = Vector2( 464.464, 544 )
+position = Vector2( 474.464, 544 )
+
+[node name="Zombie2" parent="Enemies" instance=ExtResource( 6 )]
+position = Vector2( 608, 544 )
+
+[node name="Zombie3" parent="Enemies" instance=ExtResource( 6 )]
+position = Vector2( 544, 544 )
 
 [node name="Map" type="Node2D" parent="."]
 

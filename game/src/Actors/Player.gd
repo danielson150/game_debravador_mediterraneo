@@ -2,6 +2,11 @@ extends Actor
 
 const  MAX_JUMP: = 1
 var jump_count = 0
+export var stomp_inpulse: = 300
+
+func _on_EnemyDetector_area_entered(area: Area2D) -> void:
+	_velocity = calculate_stomp_velocity(_velocity, stomp_inpulse)
+
 
 # Embora essa função esteja sendo chamada aqui, a classe extende a classe Actor
 # então todos os métodos da função de memso nome na classe Actor será executada
@@ -11,6 +16,7 @@ func _physics_process(delta) -> void:
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interupted)
 	set_animation(direction)
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
+	
 	
 func get_direction() -> Vector2:
 	return Vector2(
@@ -51,5 +57,10 @@ func set_animation(direction: Vector2) -> void:
 			$AnimatedSprite.play('run')
 			$AnimatedSprite.flip_h = false
 		else:
-			$AnimatedSprite.play('idle')
-	
+			$AnimatedSprite.play('idle')	
+
+
+func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vector2:
+		var out: = linear_velocity
+		out.y = -impulse
+		return out
