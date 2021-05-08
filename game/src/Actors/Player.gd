@@ -3,12 +3,6 @@ extends Actor
 const  MAX_JUMP: = 1
 var jump_count = 0
 
-
-func _on_EnemyDetector_body_entered(body) -> void:
-	get_node("CollisionShape2D").disabled = true
-	queue_free()
-
-
 # Embora essa função esteja sendo chamada aqui, a classe extende a classe Actor
 # então todos os métodos da função de memso nome na classe Actor será executada
 func _physics_process(delta) -> void:

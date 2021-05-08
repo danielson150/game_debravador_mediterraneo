@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/Actors/Zombie.gd" type="Script" id=1]
+[ext_resource path="res://assets/enemies/big_zombie/big_zombie_run_anim_f2.png" type="Texture" id=2]
+[ext_resource path="res://assets/enemies/big_zombie/big_zombie_run_anim_f3.png" type="Texture" id=3]
+[ext_resource path="res://assets/enemies/big_zombie/big_zombie_run_anim_f1.png" type="Texture" id=4]
+[ext_resource path="res://assets/enemies/big_zombie/big_zombie_run_anim_f0.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "run",
+"speed": 9.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 7.17924
+height = 8.13039
+
+[node name="Zombie" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 13
+script = ExtResource( 1 )
+speed = Vector2( 75, 300 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "run"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.463928, 5.68313 )
+shape = SubResource( 2 )
