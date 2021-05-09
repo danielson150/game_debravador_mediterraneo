@@ -100,4 +100,5 @@ format = 1
 tile_data = PoolIntArray( 0, 0, 0, 1245189, 0, 0, 1245203, 0, 0, 1245209, 0, 0, 1245216, 0, 0, 1245219, 0, 0, 1245226, 0, 0, 1376301, 0, 0, 1376308, 0, 0, 1638437, 0, 0, 1638444, 0, 0, 1966109, 0, 0, 1966116, 0, 0, 2228242, 0, 0, 2228266, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 104, 504.405 )
+position = Vector2( 104, 545.673 )
+restart_scene_path = "res://src/Levels/FirstLevel.tscn"

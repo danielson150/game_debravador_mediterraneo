@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="SelectScene" type="Button"]
+margin_right = 264.0
+margin_bottom = 74.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Selecionar Fase"
+__meta__ = {
+"_edit_use_anchors_": false
+}

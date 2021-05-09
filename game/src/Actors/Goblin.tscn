@@ -30,7 +30,7 @@ speed = Vector2( 120, 300 )
 position = Vector2( 0.330547, -0.220366 )
 frames = SubResource( 1 )
 animation = "run"
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

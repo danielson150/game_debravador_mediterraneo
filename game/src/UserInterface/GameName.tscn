@@ -1,0 +1,13 @@
+[gd_scene format=2]
+
+[node name="GameName" type="Label"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -98.0
+margin_top = 150.684
+margin_right = 98.0
+margin_bottom = 164.684
+text = "Desbravadores do subterrâneo"
+__meta__ = {
+"_edit_use_anchors_": false
+}

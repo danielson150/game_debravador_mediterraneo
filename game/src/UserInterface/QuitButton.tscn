@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/UserInterface/QuitButton.gd" type="Script" id=1]
+
+[node name="QuitGameButton" type="Button"]
+margin_right = 398.0
+margin_bottom = 74.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Fechar"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="." to="." method="_on_QuitGameButton_button_up"]
