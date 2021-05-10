@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/UserInterface/SelectSceneButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/UserInterface/QuitButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/UserInterface/GameName.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/UserInterface/RetryButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/UserInterface/UserInterface.gd" type="Script" id=5]
+
+[node name="UserInterface" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseOverlay" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.294118 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameName" parent="PauseOverlay" instance=ExtResource( 3 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -71.0
+margin_top = -139.893
+margin_right = 70.0
+margin_bottom = -125.893
+text = "Pause"
+align = 1
+
+[node name="PauseMenu" type="VBoxContainer" parent="PauseOverlay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -114.0
+margin_top = -46.0
+margin_right = 114.0
+margin_bottom = 89.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RetryButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 4 )]
+margin_right = 228.0
+margin_bottom = 42.0
+
+[node name="SelectScene" parent="PauseOverlay/PauseMenu" instance=ExtResource( 1 )]
+margin_top = 46.0
+margin_right = 228.0
+margin_bottom = 88.0
+
+[node name="QuitGameButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 2 )]
+margin_top = 92.0
+margin_right = 228.0
+margin_bottom = 135.0

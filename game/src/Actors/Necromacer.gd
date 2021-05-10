@@ -24,7 +24,7 @@ func fire() -> void:
 
 
 func get_fire_direction() -> Vector2:
-	var player_position = get_node("../Player").position
+	var player_position = get_node("../../Player").position
 	var necromancer_position = position	
 	return Vector2(
 		player_position.x - necromancer_position.x, 

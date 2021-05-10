@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/map/tilemaps/floor_map.tres" type="TileSet" id=2]
@@ -10,8 +10,14 @@
 [ext_resource path="res://src/Actors/Goblin.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Actors/Demon.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Actors/Necromacer.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=11]
 
 [node name="FirstLevel" type="Node2D"]
+
+[node name="UserInterface" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="UserInterface" parent="UserInterface" instance=ExtResource( 11 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -81,6 +87,9 @@ position = Vector2( 224, 310.185 )
 position = Vector2( 887.989, 250.188 )
 flip_h = true
 
+[node name="Necromacer" parent="Enemies" instance=ExtResource( 10 )]
+position = Vector2( 525, 540.625 )
+
 [node name="Map" type="Node2D" parent="."]
 
 [node name="map" type="TileMap" parent="Map"]
@@ -102,6 +111,3 @@ tile_data = PoolIntArray( 0, 0, 0, 1245189, 0, 0, 1245203, 0, 0, 1245209, 0, 0, 
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 104, 545.673 )
-
-[node name="Necromacer" parent="." instance=ExtResource( 10 )]
-position = Vector2( 525, 540.625 )
