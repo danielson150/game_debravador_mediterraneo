@@ -30,7 +30,7 @@ speed = Vector2( 120, 300 )
 position = Vector2( 0.330547, -0.220366 )
 frames = SubResource( 1 )
 animation = "run"
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -48,6 +48,6 @@ modulate = Color( 0.00392157, 0.0862745, 0.980392, 1 )
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
-position = Vector2( 0.859859, -4.66869 )
+position = Vector2( 0.859859, -5.22423 )
 shape = SubResource( 3 )
 [connection signal="body_entered" from="PlayerDetector" to="." method="_on_PlayerDetector_body_entered"]

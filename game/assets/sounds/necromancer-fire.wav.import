@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/necromancer-fire.wav-64e3385f3c2c16b7f4b8e2626fb6d2e9.sample"
+
+[deps]
+
+source_file="res://assets/sounds/necromancer-fire.wav"
+dest_files=[ "res://.import/necromancer-fire.wav-64e3385f3c2c16b7f4b8e2626fb6d2e9.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=true
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

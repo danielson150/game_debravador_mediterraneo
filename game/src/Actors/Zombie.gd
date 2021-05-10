@@ -4,8 +4,8 @@ extends "res://src/Actors/Actor.gd"
 func _ready() -> void:
 	set_physics_process(false)
 	_velocity.x = -speed.x
-	
-	
+
+
 func _on_PlayerDetector_body_entered(body: Node) -> void:
 	if body.global_position.y > get_node("PlayerDetector").global_position.y:
 		return
@@ -26,3 +26,4 @@ func set_animation(velocity: Vector2) -> void:
 		$AnimatedSprite.flip_h = true
 	else:
 		$AnimatedSprite.flip_h = false
+

@@ -7,7 +7,11 @@ export var stomp_inpulse: = 300
 
 func _on_EnemyDetector_area_entered(area: Area2D) -> void:
 	_velocity = calculate_stomp_velocity(_velocity, stomp_inpulse)
+	
 
+func _on_EnemyDetector_body_entered(body: Node) -> void:
+	pass
+	
 
 # Embora essa função esteja sendo chamada aqui, a classe extende a classe Actor
 # então todos os métodos da função de memso nome na classe Actor será executada
@@ -36,6 +40,7 @@ func calculate_move_velocity(
 		out.x = speed.x * direction.x
 		out.y += gravity * get_physics_process_delta_time()
 		if direction.y == -1.0 and jump_count < MAX_JUMP:
+			get_node("Sounds/jump").play()
 			out.y = speed.y * direction.y
 			jump_count += 1
 		if is_on_floor():
@@ -65,3 +70,4 @@ func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vecto
 		var out: = linear_velocity
 		out.y = -impulse
 		return out
+
