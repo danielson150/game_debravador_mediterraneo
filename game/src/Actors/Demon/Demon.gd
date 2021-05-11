@@ -1,7 +1,7 @@
 extends "res://src/Actors/Actor.gd"
 
 
-var fire = preload("res://src/Objects/Fire.tscn")
+var fire = preload("res://src/Objects/Fire/Fire.tscn")
 export var fire_velocity: = 100
 export var flip_h = false
 export var fire_rate: = 1

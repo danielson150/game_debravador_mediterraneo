@@ -1,14 +1,20 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Actors/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/map/tilemaps/floor_map.tres" type="TileSet" id=2]
 [ext_resource path="res://src/UserInterface/ParallaxBackground.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/Actors/Zombie.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Actors/Zombie/Zombie.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/map/tilemaps/enemy_wall.tres" type="TileSet" id=7]
-[ext_resource path="res://src/Actors/Goblin.tscn" type="PackedScene" id=8]
-[ext_resource path="res://src/Actors/Demon.tscn" type="PackedScene" id=9]
-[ext_resource path="res://src/Actors/Necromacer.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/Actors/Goblin/Goblin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Actors/Demon/Demon.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Actors/Necromancer/Necromacer.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=11]
+
+
+
+
+
+
 
 [node name="FirstLevel" type="Node2D"]
 

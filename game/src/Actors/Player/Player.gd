@@ -3,18 +3,21 @@ extends Actor
 const  MAX_JUMP: = 1
 var jump_count = 0
 export var stomp_inpulse: = 300
+var fire = preload("res://src/Actors/Player/PlayerBullet.tscn")
+var fire_force: = 300.0
 
 
 func _on_EnemyDetector_area_entered(area: Area2D) -> void:
 	_velocity = calculate_stomp_velocity(_velocity, stomp_inpulse)
 
 
-# Embora essa função esteja sendo chamada aqui, a classe extende a classe Actor
-# então todos os métodos da função de memso nome na classe Actor será executada
+func _process(delta: float) -> void:
+	fire()
+
+
 func _physics_process(delta) -> void:
-	var is_jump_interupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
 	var direction: = get_direction()
-	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interupted)
+	_velocity = calculate_move_velocity(_velocity, direction, speed)
 	set_animation(direction)
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
 	
@@ -29,8 +32,7 @@ func get_direction() -> Vector2:
 func calculate_move_velocity(
 		linear_velocity: Vector2,
 		direction: Vector2,
-		speed: Vector2,
-		is_jump_interupted: bool
+		speed: Vector2
 	) -> Vector2:
 		var out: = linear_velocity
 		out.x = speed.x * direction.x
@@ -65,3 +67,25 @@ func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vecto
 		var out: = linear_velocity
 		out.y = -impulse
 		return out
+
+
+func fire() -> void:
+	if Input.is_action_just_pressed("fire"):
+		$AnimatedSprite.play('fire')
+		var fire_direction: = get_fire_direction()
+		var fire_instance = fire.instance()
+		fire_instance.position = $FirePoint.get_global_position()
+		fire_instance.apply_impulse(
+			Vector2(0, 0), 
+			Vector2(fire_direction, 0)
+		)
+		get_tree().get_root().add_child(fire_instance)
+		
+	
+func get_fire_direction() -> float:
+	if $AnimatedSprite.flip_h:
+		$FirePoint.position.x = -10
+		return -fire_force
+	else:
+		$FirePoint.position.x = 10
+		return fire_force

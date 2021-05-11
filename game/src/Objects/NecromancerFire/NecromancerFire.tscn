@@ -1,30 +1,36 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://assets/objects/fire/Jumping_Small_Fireball_14x45.png" type="Texture" id=1]
-[ext_resource path="res://src/Objects/Fire.gd" type="Script" id=2]
-[ext_resource path="res://assets/objects/blush/light.png" type="Texture" id=3]
+[ext_resource path="res://assets/objects/blush/light.png" type="Texture" id=1]
+[ext_resource path="res://assets/objects/fire/Jumping_Small_Fireball_14x45.png" type="Texture" id=2]
 
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 1 )
-region = Rect2( 126, 135, 14, 45 )
+[sub_resource type="GDScript" id=1]
+script/source = "extends RigidBody2D
+
+func _on_Fire_body_entered(body: Node) -> void:
+	queue_free()
+"
 
 [sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 1 )
-region = Rect2( 112, 135, 14, 45 )
+atlas = ExtResource( 2 )
+region = Rect2( 126, 135, 14, 45 )
 
 [sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 2 )
+region = Rect2( 112, 135, 14, 45 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
 region = Rect2( 98, 135, 14, 45 )
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
 "name": "default",
 "speed": 10.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=5]
+[sub_resource type="CapsuleShape2D" id=6]
 radius = 2.27758
 height = 3.00869
 
@@ -36,7 +42,7 @@ mass = 1.02041
 gravity_scale = 0.0
 contacts_reported = 1
 contact_monitor = true
-script = ExtResource( 2 )
+script = SubResource( 1 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
@@ -44,15 +50,15 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 8.10623e-06, -8.33316 )
 scale = Vector2( 0.537047, 0.537047 )
-frames = SubResource( 4 )
+frames = SubResource( 5 )
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.523371, -0.237572 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="Light2D" type="Light2D" parent="."]
-texture = ExtResource( 3 )
+texture = ExtResource( 1 )
 texture_scale = 0.3
 energy = 2.0
 shadow_enabled = true

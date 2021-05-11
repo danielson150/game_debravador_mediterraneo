@@ -2,7 +2,7 @@ extends "res://src/Actors/Actor.gd"
 
 
 var fire = preload("res://src/Objects/NecromancerFire.tscn")
-var goblin = preload("res://src/Actors/Goblin.tscn")
+var goblin = preload("res://src/Actors/Goblin/Goblin.tscn")
 export var fire_velocity: = 100
 export var flip_h = false
 export var fire_rate: = 1
