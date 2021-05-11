@@ -1,36 +1,37 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://assets/player/walking/walking_5.png" type="Texture" id=1]
-[ext_resource path="res://assets/player/walking/walking_3.png" type="Texture" id=2]
-[ext_resource path="res://assets/player/walking/walking_0.png" type="Texture" id=3]
-[ext_resource path="res://assets/player/jumping/jumping_1.png" type="Texture" id=4]
-[ext_resource path="res://assets/player/jumping/jumping_2.png" type="Texture" id=5]
+[ext_resource path="res://assets/player/walking_arm/sprite_0.png" type="Texture" id=1]
+[ext_resource path="res://assets/player/walking_arm/sprite_4.png" type="Texture" id=2]
+[ext_resource path="res://assets/player/walking_arm/sprite_3.png" type="Texture" id=3]
+[ext_resource path="res://assets/player/jumping_arm/sprinte_4.png" type="Texture" id=4]
+[ext_resource path="res://assets/player/walking_arm/sprite_1.png" type="Texture" id=5]
 [ext_resource path="res://assets/player/walking/walking_2.png" type="Texture" id=6]
-[ext_resource path="res://assets/player/jumping/jumping_0.png" type="Texture" id=7]
-[ext_resource path="res://assets/player/walking/walking_1.png" type="Texture" id=8]
+[ext_resource path="res://assets/player/jumping_arm/sprinte_3.png" type="Texture" id=7]
+[ext_resource path="res://assets/player/walking_arm/sprite_5.png" type="Texture" id=8]
 [ext_resource path="res://src/Actors/Player.gd" type="Script" id=9]
 [ext_resource path="res://assets/objects/blush/light.png" type="Texture" id=10]
-[ext_resource path="res://assets/player/walking/walking_4.png" type="Texture" id=11]
-[ext_resource path="res://assets/player/jumping/jumping_3.png" type="Texture" id=12]
-[ext_resource path="res://assets/player/jumping/jumping_4.png" type="Texture" id=13]
-[ext_resource path="res://assets/player/jumping/jumping_5.png" type="Texture" id=14]
+[ext_resource path="res://assets/player/walking_arm/sprite_2.png" type="Texture" id=11]
+[ext_resource path="res://assets/player/jumping_arm/sprinte_2.png" type="Texture" id=12]
+[ext_resource path="res://assets/player/jumping_arm/sprinte_5.png" type="Texture" id=13]
+[ext_resource path="res://assets/player/jumping_arm/sprinte_6.png" type="Texture" id=14]
+[ext_resource path="res://assets/player/jumping_arm/sprinte_1.png" type="Texture" id=16]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "idle",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 14 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 13 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": false,
-"name": "jump",
-"speed": 10.0
+"name": "idle",
+"speed": 6.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 11 ), ExtResource( 1 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 11 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "run",
 "speed": 8.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 16 ) ],
+"loop": false,
+"name": "jump",
+"speed": 6.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -66,9 +67,8 @@ shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.3, 0.3 )
+zoom = Vector2( 0.4, 0.4 )
 limit_left = 0
-limit_bottom = 600
 limit_smoothed = true
 smoothing_enabled = true
 

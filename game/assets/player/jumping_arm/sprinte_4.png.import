@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mainlev_build.png-ff6dde8033c408e156258d963533bca5.stex"
+path="res://.import/sprinte_4.png-d7b512958719b2beb434c9726eea02a6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/map/mainlev_build.png"
-dest_files=[ "res://.import/mainlev_build.png-ff6dde8033c408e156258d963533bca5.stex" ]
+source_file="res://assets/player/jumping_arm/sprinte_4.png"
+dest_files=[ "res://.import/sprinte_4.png-d7b512958719b2beb434c9726eea02a6.stex" ]
 
 [params]
 
