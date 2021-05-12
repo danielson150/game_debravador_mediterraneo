@@ -1,7 +1,7 @@
 extends "res://src/Actors/Actor.gd"
 
 
-var fire = preload("res://src/Objects/NecromancerFire.tscn")
+var fire = preload("res://src/Objects/NecromancerFire/NecromancerFire.tscn")
 var goblin = preload("res://src/Actors/Goblin/Goblin.tscn")
 export var fire_velocity: = 100
 export var flip_h = false
@@ -10,9 +10,21 @@ export var goblin_rate: = 3.1
 export var fire_height: = 50
 var can_fire: = true
 var can_create_goblin = true
+var HP = 100
 
 
-func fire() -> void:
+func _on_PlayerDetector_body_entered(body: Node) -> void:
+	print(body.name)
+	if body.global_position.y > get_node("PlayerDetector").global_position.y and 'Player' in body.name:
+		HP -= 10
+	elif 'PlayerBullet' in body.name:
+		HP -= 2
+	if HP <= 0:
+		get_node("CollisionShape2D").disabled = true
+		queue_free()
+
+
+func make_fire() -> void:
 	var fire_instance = fire.instance()
 	fire_instance.position = $FirePoint.get_global_position()
 	fire_instance.apply_impulse(
@@ -58,7 +70,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if can_fire:
-		fire()
+		make_fire()
 	if can_create_goblin:
 		create_goblin()
 
@@ -77,3 +89,4 @@ func set_animation(velocity: Vector2) -> void:
 		$AnimatedSprite.flip_h = true
 	else:
 		$AnimatedSprite.flip_h = false
+

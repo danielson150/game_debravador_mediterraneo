@@ -7,8 +7,13 @@ export var its_going = true
 var elevator_position: = 0
 var _velocity = Vector2.ZERO
 
+
+func _ready() -> void:
+	if not its_going:
+		elevator_position = max_distance
+
+
 func _physics_process(delta: float) -> void:
-	print(elevator_position)
 	_velocity = get_direction()
 	_velocity = move_and_slide(_velocity)
 

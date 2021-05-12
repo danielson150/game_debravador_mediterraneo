@@ -9,7 +9,13 @@ export var fire_height: = 50
 var can_fire: = true
 
 
+func _on_ShotDetector_body_entered(body: Node) -> void:
+	if 'PlayerBullet' in body.name:
+		queue_free()
+
+
 func _ready() -> void:
+	set_physics_process(false)
 	if flip_h:
 		fire_velocity *= -1
 		$AnimatedSprite.flip_h = flip_h
@@ -28,19 +34,14 @@ func fire() -> void:
 	get_tree().get_root().add_child(fire_instance)
 	set_fire_timeout()
 		
+
 func set_fire_timeout() -> void:
 	can_fire = false
 	yield(get_tree().create_timer(fire_rate), "timeout")
 	can_fire = true
-	
-	
-func _on_PlayerDetector_body_entered(body: Node) -> void:
-	if body.global_position.y > get_node("PlayerDetector").global_position.y:
-		return
-	get_node("CollisionShape2D").disabled = true
-	queue_free()
 
 
 func _physics_process(delta: float) -> void:
 	_velocity.y += gravity * delta
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
+

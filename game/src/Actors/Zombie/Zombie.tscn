@@ -6,7 +6,6 @@
 [ext_resource path="res://assets/enemies/big_zombie/big_zombie_run_anim_f1.png" type="Texture" id=4]
 [ext_resource path="res://assets/enemies/big_zombie/big_zombie_run_anim_f0.png" type="Texture" id=5]
 
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 3 ) ],
@@ -32,6 +31,7 @@ speed = Vector2( 75, 300 )
 position = Vector2( 0.330547, -0.220366 )
 frames = SubResource( 1 )
 animation = "run"
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

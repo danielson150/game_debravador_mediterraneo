@@ -4,7 +4,7 @@ const  MAX_JUMP: = 1
 var jump_count = 0
 export var stomp_inpulse: = 300
 var fire = preload("res://src/Actors/Player/PlayerBullet.tscn")
-var fire_force: = 300.0
+export var fire_force: = 500.0
 
 
 func _on_EnemyDetector_area_entered(area: Area2D) -> void:
@@ -13,6 +13,8 @@ func _on_EnemyDetector_area_entered(area: Area2D) -> void:
 
 func _process(delta: float) -> void:
 	fire()
+	if is_die():
+		get_tree().reload_current_scene()
 
 
 func _physics_process(delta) -> void:
@@ -80,8 +82,8 @@ func fire() -> void:
 			Vector2(fire_direction, 0)
 		)
 		get_tree().get_root().add_child(fire_instance)
-		
-	
+
+
 func get_fire_direction() -> float:
 	if $AnimatedSprite.flip_h:
 		$FirePoint.position.x = -10
@@ -89,3 +91,8 @@ func get_fire_direction() -> float:
 	else:
 		$FirePoint.position.x = 10
 		return fire_force
+
+
+func is_die() -> bool:
+	return position.y > 600
+
