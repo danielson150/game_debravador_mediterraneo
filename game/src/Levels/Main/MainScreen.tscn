@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/map/background2.png" type="Texture" id=1]
 [ext_resource path="res://assets/map/background3.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/buttons/button_phase.png" type="Texture" id=8]
 [ext_resource path="res://assets/buttons/button_play.png" type="Texture" id=9]
 [ext_resource path="res://assets/buttons/button_close.png" type="Texture" id=10]
+[ext_resource path="res://assets/sound/sound_menu.ogg" type="AudioStream" id=11]
 
 [node name="MainScreen" type="Control"]
 anchor_right = 1.0
@@ -91,3 +92,7 @@ texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="music_menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+autoplay = true
