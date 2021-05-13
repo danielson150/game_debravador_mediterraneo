@@ -10,7 +10,7 @@
 [ext_resource path="res://assets/buttons/button_phase.png" type="Texture" id=8]
 [ext_resource path="res://assets/buttons/button_play.png" type="Texture" id=9]
 [ext_resource path="res://assets/buttons/button_close.png" type="Texture" id=10]
-[ext_resource path="res://assets/sound/sound_menu.ogg" type="AudioStream" id=11]
+[ext_resource path="res://assets/sound/sound_theme.ogg" type="AudioStream" id=11]
 
 [node name="MainScreen" type="Control"]
 anchor_right = 1.0

@@ -11,6 +11,10 @@ func _on_EnemyDetector_area_entered(area: Area2D) -> void:
 	_velocity = calculate_stomp_velocity(_velocity, stomp_inpulse)
 
 
+func _on_EnemyDetector_body_entered(body: Node) -> void:
+	$Sounds/damage.play()
+
+
 func _process(delta: float) -> void:
 	fire()
 	if is_die():
@@ -74,6 +78,7 @@ func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vecto
 func fire() -> void:
 	if Input.is_action_just_pressed("fire"):
 		$AnimatedSprite.play('fire')
+		$Sounds/fire.play()
 		var fire_direction: = get_fire_direction()
 		var fire_instance = fire.instance()
 		fire_instance.position = $FirePoint.get_global_position()
@@ -95,4 +100,3 @@ func get_fire_direction() -> float:
 
 func is_die() -> bool:
 	return position.y > 600
-
