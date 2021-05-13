@@ -5,14 +5,12 @@ var jump_count = 0
 export var stomp_inpulse: = 300
 var fire = preload("res://src/Actors/Player/PlayerBullet.tscn")
 export var fire_force: = 500.0
+var hp: = 100
+var shot_fire_count = 5
 
 
 func _on_EnemyDetector_area_entered(area: Area2D) -> void:
 	_velocity = calculate_stomp_velocity(_velocity, stomp_inpulse)
-
-
-func _on_EnemyDetector_body_entered(body: Node) -> void:
-	$Sounds/damage.play()
 
 
 func _process(delta: float) -> void:
@@ -76,7 +74,7 @@ func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vecto
 
 
 func fire() -> void:
-	if Input.is_action_just_pressed("fire"):
+	if Input.is_action_just_pressed("fire") and shot_fire_count > 0:
 		$AnimatedSprite.play('fire')
 		$Sounds/fire.play()
 		var fire_direction: = get_fire_direction()
@@ -87,6 +85,7 @@ func fire() -> void:
 			Vector2(fire_direction, 0)
 		)
 		get_tree().get_root().add_child(fire_instance)
+		shot_fire_count -= 1
 
 
 func get_fire_direction() -> float:

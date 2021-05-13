@@ -93,4 +93,3 @@ volume_db = -10.0
 [node name="damage" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 18 )
 [connection signal="area_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_area_entered"]
-[connection signal="body_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_body_entered"]
