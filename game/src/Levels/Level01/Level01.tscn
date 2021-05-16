@@ -145,7 +145,11 @@ position = Vector2( 1319, 283 )
 
 [node name="ThemeFX" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 8 )
+volume_db = 5.69
 autoplay = true
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 32, 505.471 )
+gravity = 1000.0
+stomp_inpulse = 300
+fire_force = 500.0

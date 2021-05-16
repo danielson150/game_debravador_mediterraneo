@@ -13,10 +13,17 @@ func _on_EnemyDetector_area_entered(area: Area2D) -> void:
 	_velocity = calculate_stomp_velocity(_velocity, stomp_inpulse)
 
 
+func _on_EnemyDetector_body_entered(body: Node) -> void:
+	if not body.get_groups().empty():
+		hp -= 10
+	if hp <= 0:
+		die()
+
+
 func _process(delta: float) -> void:
 	fire()
-	if is_die():
-		get_tree().reload_current_scene()
+	if is_out_of_map():
+		die()
 
 
 func _physics_process(delta) -> void:
@@ -97,5 +104,9 @@ func get_fire_direction() -> float:
 		return fire_force
 
 
-func is_die() -> bool:
+func is_out_of_map() -> bool:
 	return position.y > 600
+
+
+func die() -> void:
+	get_tree().reload_current_scene()
