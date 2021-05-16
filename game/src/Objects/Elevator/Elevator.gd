@@ -1,7 +1,7 @@
-extends KinematicBody2D
+extends RigidBody2D
 
-export var speed: = 100
-export var max_distance: = 10000
+export var speed: = 20
+export var max_distance: = 100
 export var horizontal: = true
 export var its_going = true
 var elevator_position: = 0
@@ -14,11 +14,12 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	_velocity = get_direction()
-	_velocity = move_and_slide(_velocity)
+	if its_going and elevator_position >= max_distance:
+		get_direction()
+	if not its_going and elevator_position <= 0:
+		get_direction()
 
-
-func get_direction() ->  Vector2:
+func get_direction() ->  void:
 	var out = _velocity
 	
 	if its_going:
@@ -40,4 +41,4 @@ func get_direction() ->  Vector2:
 		if elevator_position <= 0:
 			its_going = true
 
-	return out
+	apply_central_impulse(out)

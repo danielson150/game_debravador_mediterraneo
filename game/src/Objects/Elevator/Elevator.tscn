@@ -6,9 +6,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 64, 16 )
 
-[node name="Elevator" type="KinematicBody2D"]
+[node name="Elevator" type="RigidBody2D"]
 collision_layer = 4
 collision_mask = 0
+mass = 0.5
 script = ExtResource( 2 )
 
 [node name="TileMap" type="TileMap" parent="."]
