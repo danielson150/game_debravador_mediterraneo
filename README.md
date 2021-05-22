@@ -1,6 +1,7 @@
-<h1 style="text-align: center;">:construction: Desbravadores Subterraneo (Em desenvolvimento)</h1>
+<h1 style="text-align: center;">Desbravadores Subterraneo</h1>
 <p style="text-align: center;">Para acompanhamento no desenvolvimento do projeto para a disciplina de TÓPICOS ESPECIAIS
     EM PROGRAMAÇÃO (TEP).</p>
+<p style="text-align: center;">Publicação: <a href="https://danielsonalencar.itch.io/desbravadores-do-subterrneo">https://danielsonalencar.itch.io/desbravadores-do-subterrneo</a></p>
 
 <hr>
 
